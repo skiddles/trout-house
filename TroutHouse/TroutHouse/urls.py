@@ -20,6 +20,6 @@ admin.autodiscover()
 
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
-    re_path(r'^$', include('TroutHouse.views.index'), name='main-view'),
-    re_path(r'^(?P<slug>[\w\-]+)/$', include('TroutHouse.views.post'), name='post'),
+    # re_path(r'^$', include('TroutHouse.views.index'), name='main-view'),
+    # re_path(r'^(?P<slug>[\w\-]+)/$', include('TroutHouse.views.post'), name='post'),
 ]
