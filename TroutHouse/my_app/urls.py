@@ -1,4 +1,4 @@
-"""TroutHouse URL Configuration
+"""my_app URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path, include
+from . import views
 
 admin.autodiscover()
 
 urlpatterns = [
-    path('myapp/', include('my_app.urls')),  # This points to the urls file in /my_app
-    re_path(r'^admin/', admin.site.urls),
+    path('', views.index, name='my_app.index'),  # This is accessed via the TroutHouse/urls.py reference
     # re_path(r'^$', include('TroutHouse.views.index'), name='main-view'),
     # re_path(r'^(?P<slug>[\w\-]+)/$', include('TroutHouse.views.post'), name='post'),
 ]
