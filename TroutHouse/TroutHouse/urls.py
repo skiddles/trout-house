@@ -19,7 +19,7 @@ from django.urls import path, re_path, include
 admin.autodiscover()
 
 urlpatterns = [
-    path('myapp/', include('my_app.urls')),  # This points to the urls file in /my_app
+    path('my_app/', include('my_app.urls')),  # This points to the urls file in /my_app
     re_path(r'^admin/', admin.site.urls),
     # re_path(r'^$', include('TroutHouse.views.index'), name='main-view'),
     # re_path(r'^(?P<slug>[\w\-]+)/$', include('TroutHouse.views.post'), name='post'),
